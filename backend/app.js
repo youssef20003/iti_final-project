@@ -12,9 +12,6 @@ mongoose.connect('mongodb+srv://youssefm:f7xCCdVxXUZ2Euu1@cluster0.jdvmm.mongodb
 }).catch(function (error) {
     console.log('database disconnected')
 })
-server.listen(3002,()=>{
-    console.log('Server is running on http://localhost:3002');
-})
 server.get("/products", function(req , res){
     Productmodel.find().then((data) =>{
     res.send(data)
